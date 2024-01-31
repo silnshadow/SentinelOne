@@ -1,4 +1,6 @@
 
+using SentinelOne.Authentication.Config;
+
 namespace SentinelOne.Authentication
 {
     public class Program
@@ -10,6 +12,7 @@ namespace SentinelOne.Authentication
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.ConfigureCommonDependencyInjection(builder.Configuration);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
