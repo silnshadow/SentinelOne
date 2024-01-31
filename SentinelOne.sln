@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{09D0891B-0AA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.Authentication", "SentinelOne.Authentication\SentinelOne.Authentication.csproj", "{D43A4613-F4EC-4CAA-B4C3-DDBB05E836E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.Authentication.DataAccess", "SentinelOne.Authentication.DataAccess\SentinelOne.Authentication.DataAccess.csproj", "{1FA1094A-23D1-4689-BA47-08FED69ED61B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.Authentication.Business", "SentinelOne.Authentication.Business\SentinelOne.Authentication.Business.csproj", "{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{D43A4613-F4EC-4CAA-B4C3-DDBB05E836E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D43A4613-F4EC-4CAA-B4C3-DDBB05E836E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D43A4613-F4EC-4CAA-B4C3-DDBB05E836E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA1094A-23D1-4689-BA47-08FED69ED61B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA1094A-23D1-4689-BA47-08FED69ED61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA1094A-23D1-4689-BA47-08FED69ED61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA1094A-23D1-4689-BA47-08FED69ED61B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +76,8 @@ Global
 		{CC0503EF-32D7-4869-B727-67792E27B860} = {660D6BD5-7399-4444-85B6-5586671535A0}
 		{09D0891B-0AA7-42BC-B17C-86198DF1BBE7} = {DFBFDF24-EE2F-4223-B63B-60C7FCC6E071}
 		{D43A4613-F4EC-4CAA-B4C3-DDBB05E836E2} = {09D0891B-0AA7-42BC-B17C-86198DF1BBE7}
+		{1FA1094A-23D1-4689-BA47-08FED69ED61B} = {09D0891B-0AA7-42BC-B17C-86198DF1BBE7}
+		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E} = {09D0891B-0AA7-42BC-B17C-86198DF1BBE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {629CFB57-A174-41A9-9EEA-C7FB3ADC6E0E}
