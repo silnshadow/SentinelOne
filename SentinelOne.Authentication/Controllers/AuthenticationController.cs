@@ -5,25 +5,19 @@ using SentinelModel = SentinelOne.Authentication.Models;
 namespace SentinelOne.Authentication.Controllers;
 
 [ApiController]
-[Route("auth")]
-public class AuthenticationController : ControllerBase
+[Route("api/[controller]")]
+public class AuthenticationController(ISentinelAuthenticator authenticationService) : ControllerBase
 {
-    private readonly ISentinelAuthenticator _authenticationService;
-    public AuthenticationController(ISentinelAuthenticator authenticationService)
-    {
-        _authenticationService = authenticationService;
-    }
-
     [HttpPost("login")]
     public ActionResult<string> Login([FromBody] SentinelModel.LoginRequest request)
     {
-        string token = _authenticationService.Authenticate(request.Username, request.Password);
+        string token = authenticationService.Authenticate(request.Username, request.Password);
 
-        if (token != null)
+        if (string.IsNullOrWhiteSpace(token))
         {
-            return Ok(new { Token = token });
+            return Unauthorized();
         }
 
-        return Unauthorized();
+        return Ok(new { Token = token });
     }
 }

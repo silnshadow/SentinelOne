@@ -1,4 +1,5 @@
 ﻿using SentinelOne.Authentication.Business.Implementations;
+using SentinelOne.Authentication.Business.Interfaces;
 using ISentinelAuthenticator = SentinelOne.Authentication.Business.Interfaces.IAuthenticationService;
 
 namespace SentinelOne.Authentication.Config
@@ -9,6 +10,7 @@ namespace SentinelOne.Authentication.Config
         {
             //Services
             services.AddTransient<ISentinelAuthenticator, UsernamePasswordAuthenticationService>();
+            services.AddTransient<ITokenProviderService, TokenProviderService>();
         }
     }
 }
