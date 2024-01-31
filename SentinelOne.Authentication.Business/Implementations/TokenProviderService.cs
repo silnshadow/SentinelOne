@@ -10,7 +10,7 @@ namespace SentinelOne.Authentication.Business.Implementations;
 
 public class TokenProviderService(IConfiguration configuration) : ITokenProviderService
 {
-    public string GenerateJwtToken(string username)
+    public string GenerateJwtTokenv1(string username)
     {
         var issuer = configuration["Jwt:Issuer"];
         var audience = configuration["Jwt:Audience"];
@@ -36,5 +36,21 @@ public class TokenProviderService(IConfiguration configuration) : ITokenProvider
         var tokenHandler = new JwtSecurityTokenHandler();
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
+    }
+
+    public string GenerateJwtToken(string username)
+    {
+        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]));
+        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+        var token = new JwtSecurityToken(
+            issuer: configuration["Jwt:Issuer"],
+            audience: configuration["Jwt:Audience"],
+            claims: new[] { new Claim(ClaimTypes.Name, username) },
+            expires: DateTime.UtcNow.AddMinutes(15), // Token expiration time
+            signingCredentials: credentials
+        );
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }
