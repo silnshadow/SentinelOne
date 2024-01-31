@@ -3,7 +3,7 @@ using SentinelOne.Authentication.DataAccess.DataSources;
 
 namespace SentinelOne.Authentication.Business.Implementations;
 
-public class UsernamePasswordAuthenticationService : IAuthenticationService
+public class UsernamePasswordAuthenticationService(ITokenProviderService tokenProviderService) : IAuthenticationService
 {
     public string Authenticate(string username, string password)
     {
@@ -30,8 +30,7 @@ public class UsernamePasswordAuthenticationService : IAuthenticationService
 
     private string GenerateJwtToken(string username)
     {
-        // Use a JWT library to generate a token (e.g., System.IdentityModel.Tokens.Jwt)
-        // This is a simplified example, not suitable for production
-        return $"Bearer {username}_token";
+        var fetchedToken = tokenProviderService.GenerateJwtToken(username);
+        return $"Bearer {fetchedToken}";
     }
 }
