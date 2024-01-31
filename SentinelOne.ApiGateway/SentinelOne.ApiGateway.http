@@ -1,0 +1,6 @@
+@SentinelOne.ApiGateway_HostAddress = http://localhost:5182
+
+GET {{SentinelOne.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
