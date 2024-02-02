@@ -38,10 +38,6 @@ SentinelOne is an advanced endpoint protection platform that revolutionizes cybe
    dotnet run
    ```
 
-## Configuration
-
-[Explain how users can configure or customize SentinelOne. Include information on settings, policies, etc.]
-
 ## Contributing
 
 If you'd like to contribute to SentinelOne, please follow the guidelines outlined in [CONTRIBUTING.md](CONTRIBUTING.md).
