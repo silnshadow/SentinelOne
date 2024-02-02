@@ -34,13 +34,6 @@ namespace SentinelOne.Authentication
             builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddEnvironmentVariables();
 
-            builder.Services.ConfigureAuthentication(builder.Configuration);
-            builder.Services.AddAuthorization();
-
-            // Add configuration from appsettings.json
-            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddEnvironmentVariables();
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
