@@ -1,1 +1,1 @@
-[![Deployment Status](https://github.com/silnshadow/SentinelOne/workflows/dotnet/badge.svg)](https://github.com/silnshadow/SentinelOne/actions)
+[![Deployment Status](https://github.com/silnshadow/SentinelOne/actions/workflows/dotnet.yml/badge.svg)](https://github.com/silnshadow/SentinelOne/actions/workflows/dotnet.yml)
