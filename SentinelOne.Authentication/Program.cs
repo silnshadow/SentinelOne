@@ -16,6 +16,16 @@ namespace SentinelOne.Authentication
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            // Add this inside the ConfigureServices method
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("http://localhost:4200")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
 
             builder.Services.ConfigureAuthentication(builder.Configuration);
             builder.Services.AddAuthorization();
@@ -32,7 +42,8 @@ namespace SentinelOne.Authentication
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            // Add this inside the Configure method, before app.UseEndpoints()
+            app.UseCors();
             app.UseHttpsRedirection();
 
             app.UseAuthentication();

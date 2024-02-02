@@ -7,27 +7,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sentinelone-user-service", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{81C1E04D-85F2-48C9-A213-361BDDF0B6FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.Api", "SentinelOne.Api\SentinelOne.Api.csproj", "{46852590-3188-4A16-8617-C4888D0F2B4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentinelOne.Api", "SentinelOne.Api\SentinelOne.Api.csproj", "{46852590-3188-4A16-8617-C4888D0F2B4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.Authorization", "SentinelOne.Authorization\SentinelOne.Authorization.csproj", "{7641B3BA-9EF6-4C10-ACDE-02B1976E1B27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentinelOne.Authorization", "SentinelOne.Authorization\SentinelOne.Authorization.csproj", "{7641B3BA-9EF6-4C10-ACDE-02B1976E1B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.Persistence", "SentinelOne.Persistence\SentinelOne.Persistence.csproj", "{DD8169AF-9988-4FDD-8535-43B779815745}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentinelOne.Persistence", "SentinelOne.Persistence\SentinelOne.Persistence.csproj", "{DD8169AF-9988-4FDD-8535-43B779815745}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sentinelone-api-gateway", "sentinelone-api-gateway", "{0583102F-E07E-4669-B684-8DABF9323730}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{660D6BD5-7399-4444-85B6-5586671535A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.ApiGateway", "SentinelOne.ApiGateway\SentinelOne.ApiGateway.csproj", "{CC0503EF-32D7-4869-B727-67792E27B860}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentinelOne.ApiGateway", "SentinelOne.ApiGateway\SentinelOne.ApiGateway.csproj", "{CC0503EF-32D7-4869-B727-67792E27B860}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sentinelone-auth-service", "sentinelone-auth-service", "{DFBFDF24-EE2F-4223-B63B-60C7FCC6E071}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{09D0891B-0AA7-42BC-B17C-86198DF1BBE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.Authentication", "SentinelOne.Authentication\SentinelOne.Authentication.csproj", "{D43A4613-F4EC-4CAA-B4C3-DDBB05E836E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentinelOne.Authentication", "SentinelOne.Authentication\SentinelOne.Authentication.csproj", "{D43A4613-F4EC-4CAA-B4C3-DDBB05E836E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.Authentication.DataAccess", "SentinelOne.Authentication.DataAccess\SentinelOne.Authentication.DataAccess.csproj", "{1FA1094A-23D1-4689-BA47-08FED69ED61B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentinelOne.Authentication.DataAccess", "SentinelOne.Authentication.DataAccess\SentinelOne.Authentication.DataAccess.csproj", "{1FA1094A-23D1-4689-BA47-08FED69ED61B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.Authentication.Business", "SentinelOne.Authentication.Business\SentinelOne.Authentication.Business.csproj", "{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentinelOne.Authentication.Business", "SentinelOne.Authentication.Business\SentinelOne.Authentication.Business.csproj", "{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "sentinel-spa", "sentinel-spa\sentinel-spa.esproj", "{916A1F49-FBF9-4A19-9D90-3FD7C6E1A63B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sentinel-music-api", "sentinel-music-api", "{FD3B9335-B88A-4C51-8047-A394C50A7104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicBrainz.API", "MusicBrainz.API\MusicBrainz.API.csproj", "{6261273C-B285-4F9F-A6FC-66FCD7C219A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,16 @@ Global
 		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916A1F49-FBF9-4A19-9D90-3FD7C6E1A63B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916A1F49-FBF9-4A19-9D90-3FD7C6E1A63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916A1F49-FBF9-4A19-9D90-3FD7C6E1A63B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{916A1F49-FBF9-4A19-9D90-3FD7C6E1A63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916A1F49-FBF9-4A19-9D90-3FD7C6E1A63B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916A1F49-FBF9-4A19-9D90-3FD7C6E1A63B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6261273C-B285-4F9F-A6FC-66FCD7C219A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6261273C-B285-4F9F-A6FC-66FCD7C219A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6261273C-B285-4F9F-A6FC-66FCD7C219A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6261273C-B285-4F9F-A6FC-66FCD7C219A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +94,7 @@ Global
 		{D43A4613-F4EC-4CAA-B4C3-DDBB05E836E2} = {09D0891B-0AA7-42BC-B17C-86198DF1BBE7}
 		{1FA1094A-23D1-4689-BA47-08FED69ED61B} = {09D0891B-0AA7-42BC-B17C-86198DF1BBE7}
 		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E} = {09D0891B-0AA7-42BC-B17C-86198DF1BBE7}
+		{6261273C-B285-4F9F-A6FC-66FCD7C219A6} = {FD3B9335-B88A-4C51-8047-A394C50A7104}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {629CFB57-A174-41A9-9EEA-C7FB3ADC6E0E}

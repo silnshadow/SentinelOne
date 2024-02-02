@@ -9,7 +9,7 @@ namespace SentinelOne.Authentication.Controllers;
 public class AuthenticationController(ISentinelAuthenticator authenticationService) : ControllerBase
 {
     [HttpPost("login")]
-    public ActionResult<string> Login([FromBody] SentinelModel.LoginRequest request)
+    public IActionResult Login([FromBody] SentinelModel.LoginRequest request)
     {
         string token = authenticationService.Authenticate(request.Username, request.Password);
 
@@ -18,6 +18,6 @@ public class AuthenticationController(ISentinelAuthenticator authenticationServi
             return Unauthorized();
         }
 
-        return Ok(new { Token = token });
+        return Ok(new { token});
     }
 }
