@@ -38,12 +38,6 @@ SentinelOne is an advanced endpoint protection platform that revolutionizes cybe
    dotnet run
    ```
 
-   [Include additional installation steps if required]
-
-## Usage
-
-[Provide examples or guidelines on how to use the platform. Include sample commands or configurations.]
-
 ## Configuration
 
 [Explain how users can configure or customize SentinelOne. Include information on settings, policies, etc.]
@@ -54,12 +48,4 @@ If you'd like to contribute to SentinelOne, please follow the guidelines outline
 
 ## License
 
-This project is licensed under the [License Name]. See the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-[Include any acknowledgments or credits as necessary]
-
----
-
-Feel free to adjust the content based on the specific features and functionalities of your SentinelOne project.
+This project is licensed under the [MIT]. See the [LICENSE.md](LICENSE.md) file for details.
