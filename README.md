@@ -20,7 +20,7 @@ SentinelOne is an advanced endpoint protection platform that revolutionizes cybe
 
 ### Prerequisites
 
-- [List any prerequisites or dependencies required for installation]
+- npm install for SPA Angular
 
 ### Installation
 
