@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using SentinelOne.Authentication.Models;
 using System.Text;
 
 namespace SentinelOne.Authentication.Config
@@ -27,6 +30,17 @@ namespace SentinelOne.Authentication.Config
                 };
             });
 
+        }
+
+        public static void ConfigureGoogleAuthentication(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    options.ClientId = "YOUR_CLIENT_ID";
+                    options.ClientSecret = "YOUR_CLIENT_SECRET";
+                    options.SignInScheme = "Google";
+                });
         }
     }
 }
