@@ -8,10 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { ErrorInterceptor } from './core/error.Interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent, LoginComponent],
-  imports: [HttpClientModule, BrowserModule, FormsModule, AppRoutingModule],
+  imports: [HttpClientModule, BrowserModule, FormsModule, AppRoutingModule,BrowserAnimationsModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
