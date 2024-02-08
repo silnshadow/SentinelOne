@@ -1,0 +1,29 @@
+.login-container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    margin-top: 20%; /* Adjust as needed for vertical centering */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #0868ce;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: default;
+    text-align:center;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 2px lightblue ;
+  }
+  

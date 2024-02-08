@@ -1,0 +1,33 @@
+<div class="dashboard-container">
+    <!-- <div class="spinner"></div> -->
+
+    <div>
+        <div class="welcome-header">
+            {{ welcomeMessage }}
+        </div>
+    </div>
+
+    <div style="display: flex; margin:20px;">
+        <div class="cards">
+            <p class="service-header">
+                Interceptor
+            </p>
+            <button (click)="displayError()">Generate error</button>
+        </div>
+        <div class="cards">
+            <p class="service-header">
+                Menu
+            </p>
+        </div>
+        <div class="cards">
+            <p class="service-header">
+                WebSocket
+            </p>
+        </div>
+        <div class="cards">
+            <p class="service-header">
+                RxJs
+            </p>
+        </div>
+    </div>
+</div>

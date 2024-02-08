@@ -1,0 +1,54 @@
+.dashboard-container{
+ background-color: white;
+ padding: 4px;
+ margin: 4px;   
+}
+
+.welcome-header{
+    font-size: x-large;
+    background-color: yellowgreen;
+    text-align: center;
+    box-shadow: 3px 3px 1px green;
+    padding: 4px;
+    margin: 4px;
+}
+
+.cards {
+    width: 300px;
+    height:300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 10px;
+  }
+
+  .service-header{
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: azure;
+    box-shadow: 2px 2px 4px seagreen;
+    padding: 4px;
+    margin: 8px;
+    border-radius: 2px;
+  }
+
+  .spinner {
+    display: flex;
+    margin-top: 10px;
+    height: 10px;
+    width: 10px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: rgb(39, 105, 68); /* Change the color of the spinner */
+    border-radius: 50%;
+    animation: spinnerAnimation 4s linear infinite;
+  }
+  
+  @keyframes spinnerAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+  }
+  
