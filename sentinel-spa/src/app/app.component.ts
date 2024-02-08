@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MusicBrainzService } from './music-brainz.service';
+import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,24 +9,8 @@ import { MusicBrainzService } from './music-brainz.service';
 })
 export class AppComponent {
   title = 'sentinel-spa';
-  artist: any;
-  apiStatus: any;
-  username: string = '';
-  password: string = '';
 
-  constructor(private musicBrainzService: MusicBrainzService) {
-  }
-
-  onSubmit() {
-    this.musicBrainzService.login(this.username, this.password).subscribe(
-      response => {
-        // Handle successful login response
-        console.log('Login successful:', response);
-      },
-      error => {
-        // Handle login error
-        console.error('Login error:', error);
-      }
-    );
+  constructor(private authService: AuthService,
+    private router: Router) {
   }
 }
