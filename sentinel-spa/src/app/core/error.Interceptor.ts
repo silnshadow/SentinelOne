@@ -27,7 +27,7 @@ export class ErrorInterceptor implements HttpInterceptor {
     this.snackBar.open(message, 'Dismiss', {
       horizontalPosition: 'right',
       verticalPosition: 'top',
-      panelClass: ['http-error-snackbar'],
+      panelClass: ['custom-snackbar'],
       duration: 3000,
     });
   }

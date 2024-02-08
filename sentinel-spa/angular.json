@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sentinel-spa:build:production"
+              "buildTarget": "sentinel-spa:build:production"
             },
             "development": {
-              "browserTarget": "sentinel-spa:build:development"
+              "buildTarget": "sentinel-spa:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sentinel-spa:build"
+            "buildTarget": "sentinel-spa:build"
           }
         },
         "test": {
