@@ -1,0 +1,23 @@
+.cool-table {
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.cool-table th, .cool-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.cool-table th {
+    background-color: #f2f2f2;
+    color: rgb(37, 34, 34);
+}
+
+.cool-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cool-table tbody tr:hover {
+    background-color: #ddd;
+}

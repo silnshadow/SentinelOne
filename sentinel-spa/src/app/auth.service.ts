@@ -57,4 +57,8 @@ export class AuthService {
     // Check if user is logged in based on presence of user information in Local Storage
     return !!localStorage.getItem(this.USER_KEY);
   }
+
+  getAuthToken(): any {
+    return this.getCurrentUser().token;
+  }
 }
