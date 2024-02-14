@@ -8,10 +8,10 @@ namespace SentinelOne.ApiGateway.Controllers
     [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Boom Bam","Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        private static readonly string[] Summaries =
+        [
+            "Freezing", "Boom Bam", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        ];
 
         private readonly ILogger<WeatherForecastController> _logger;
 
@@ -21,15 +21,24 @@ namespace SentinelOne.ApiGateway.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<IEnumerable<WeatherForecast>> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            var rng = new Random();
+            var startDate = DateTime.Now.Date;
+
+            var test = Enumerable.Range(1, 10000).Select(index =>
             {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+                var randomDate = startDate.AddDays(index);
+                return new WeatherForecast
+                {
+                    Date = DateOnly.FromDateTime(randomDate),
+                    TemperatureC = rng.Next(-20, 55),
+                    Summary = Summaries[rng.Next(Summaries.Length)]
+                };
+            });
+
+            return await Task.FromResult(test);
         }
+
     }
 }

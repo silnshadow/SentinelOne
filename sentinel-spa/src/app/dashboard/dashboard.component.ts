@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class DashboardComponent {
   private authService = inject(AuthService);
   welcomeMessage!: string;
 
-constructor(){
+constructor(private router: Router){
 
   if(this.authService.isLoggedIn()){
     this.welcomeMessage = `Hi ${this.authService.getCurrentUser().username}`;
@@ -26,5 +26,9 @@ displayError(): void {
     // Handle the error or pass it to an error handling service
     console.error('Error occurred:', error);
   }
+}
+
+showWeatherBoard(): void{
+  this.router.navigate(['/weather-board']);
 }
 }

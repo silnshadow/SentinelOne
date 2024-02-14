@@ -10,4 +10,21 @@
   .custom-snackbar-message {
     color: #ffffff;
   }
+
+  .dashboard-container{
+    background-color: white;
+    padding: 4px;
+    margin: 4px;   
+   }
   
+   .search-bar{
+    display: block;
+    width: 200px;
+    height: 30px;
+    box-shadow: 2px 2px 2px lightblue;
+    text-align: left;
+    margin: 10px;
+    float: right;
+    border-radius: 10px;
+    padding-left: 8px;
+   }
