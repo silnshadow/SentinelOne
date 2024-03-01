@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/auth.service'; // Import your AuthService
   providedIn: 'root'
 })
 export class WeatherForecastService {
-  private weatherApiUrl = 'https://localhost:32780/api/WeatherForecast';
+  private weatherApiUrl = 'https://localhost:7253/api/WeatherForecast';
 
   constructor(
     private http: HttpClient,
