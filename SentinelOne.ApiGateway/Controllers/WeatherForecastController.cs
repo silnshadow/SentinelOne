@@ -27,7 +27,7 @@ namespace SentinelOne.ApiGateway.Controllers
             var rng = new Random();
             var startDate = DateTime.Now.Date;
 
-            var test = Enumerable.Range(1, 10000).Select(index =>
+            var test = Enumerable.Range(1, 10).Select(index =>
             {
                 var randomDate = startDate.AddDays(index);
                 return new WeatherForecast
