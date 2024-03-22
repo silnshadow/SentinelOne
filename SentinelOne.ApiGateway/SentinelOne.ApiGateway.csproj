@@ -11,8 +11,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SentinelOne.ApiGateway.Business\SentinelOne.ApiGateway.Business.csproj" />
+    <ProjectReference Include="..\SentinelOne.ApiGateway.DataAccess\SentinelOne.ApiGateway.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

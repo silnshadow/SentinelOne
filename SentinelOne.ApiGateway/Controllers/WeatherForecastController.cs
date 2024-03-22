@@ -61,25 +61,6 @@ namespace SentinelOne.ApiGateway.Controllers
         //    return await Task.FromResult(test);
         //}
 
-        [HttpGet("GetWeatherForecast")]
-        public async Task<IActionResult> GetChoosedWeatherV1([FromQuery] WeatherRequest weatherRequest)
-        {
-            var rng = new Random();
-            var startDate = DateTime.Now.Date;
-
-            var test = Enumerable.Range(1, 10).Select(index =>
-            {
-                var randomDate = startDate.AddDays(index);
-                return new WeatherForecast
-                {
-                    Date = DateOnly.FromDateTime(randomDate),
-                    TemperatureC = rng.Next(-20, 55),
-                    Summary = Summaries[rng.Next(Summaries.Length)]
-                };
-            });
-
-            return Ok(test);
-        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateWeather(int id, WeatherRequest weatherRequest)
