@@ -33,7 +33,11 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "sentinel-spa", "sentinel-sp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sentinelone-clinets", "sentinelone-clinets", "{FEC04430-63DD-486B-8166-424E1297843E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne-CoreMvc", "SentinelOne-CoreMvc\SentinelOne-CoreMvc.csproj", "{4C72B32A-FB79-4BDC-BC15-D9DCAC423790}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentinelOne-CoreMvc", "SentinelOne-CoreMvc\SentinelOne-CoreMvc.csproj", "{4C72B32A-FB79-4BDC-BC15-D9DCAC423790}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.ApiGateway.Business", "SentinelOne.ApiGateway.Business\SentinelOne.ApiGateway.Business.csproj", "{A34BFE78-8E73-4CAF-BB89-96952A949507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelOne.ApiGateway.DataAccess", "SentinelOne.ApiGateway.DataAccess\SentinelOne.ApiGateway.DataAccess.csproj", "{A829B2B2-92F6-4F82-BC32-42AC7CE82EBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +83,14 @@ Global
 		{4C72B32A-FB79-4BDC-BC15-D9DCAC423790}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C72B32A-FB79-4BDC-BC15-D9DCAC423790}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C72B32A-FB79-4BDC-BC15-D9DCAC423790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A34BFE78-8E73-4CAF-BB89-96952A949507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A34BFE78-8E73-4CAF-BB89-96952A949507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A34BFE78-8E73-4CAF-BB89-96952A949507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A34BFE78-8E73-4CAF-BB89-96952A949507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A829B2B2-92F6-4F82-BC32-42AC7CE82EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A829B2B2-92F6-4F82-BC32-42AC7CE82EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A829B2B2-92F6-4F82-BC32-42AC7CE82EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A829B2B2-92F6-4F82-BC32-42AC7CE82EBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +107,8 @@ Global
 		{1FA1094A-23D1-4689-BA47-08FED69ED61B} = {09D0891B-0AA7-42BC-B17C-86198DF1BBE7}
 		{64BBF1EB-7A43-4A5C-8952-3D7A7793DD8E} = {09D0891B-0AA7-42BC-B17C-86198DF1BBE7}
 		{4C72B32A-FB79-4BDC-BC15-D9DCAC423790} = {FEC04430-63DD-486B-8166-424E1297843E}
+		{A34BFE78-8E73-4CAF-BB89-96952A949507} = {0583102F-E07E-4669-B684-8DABF9323730}
+		{A829B2B2-92F6-4F82-BC32-42AC7CE82EBD} = {0583102F-E07E-4669-B684-8DABF9323730}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {629CFB57-A174-41A9-9EEA-C7FB3ADC6E0E}

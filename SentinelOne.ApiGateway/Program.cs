@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.IdentityModel.Tokens;
+using SentinelOne.ApiGateway.Config;
 using System.Text;
 
 namespace SentinelOne.ApiGateway
@@ -47,6 +48,7 @@ namespace SentinelOne.ApiGateway
                 };
             });
             builder.Services.AddAuthorization();
+            builder.Services.ConfigureCommonDependencyInjection(builder.Configuration);
 
             // Add configuration from appsettings.json
             builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
