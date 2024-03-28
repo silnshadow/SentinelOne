@@ -1,45 +1,52 @@
-<ol style="margin-top:100px;padding-top:10px">
-    <li>
-      <mat-form-field>
-        <mat-label>What's your name?</mat-label>
-        <input matInput [(ngModel)]="name">
-      </mat-form-field>
-    </li>
-    <li>
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
-    </li>
-    @if (animal) {
-      <li>You chose: <em>{{animal}}</em></li>
-    }
-  </ol>
-  
+<div>
+<h1 class="text-3xl font-bold underline items-center text-green-400 bg-slate-500">
+  Add Your Weather
+</h1>
+<button mat-icon-button (click)="openDialog()">
+  <mat-icon>add</mat-icon>
+</button>
+</div>
 <div class="dashboard-container">
-    <p style="text-align: center;
-    background-color:lightskyblue;
-    padding:4px">Weather Forecast</p>
-    <form [formGroup]="searchSection">
-        <input type="text" 
-        placeholder="search weather"
-        class="search-bar" formControlName="searchBox">
-    </form>
-    
-    <table class="cool-table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Summary</th>
-                <th>TemperatureC</th>
-                <th>TemperatureF</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let weather of filteredForecasts$ | async">
-                <td>{{ weather.date }}</td>
-                <td>{{ weather.summary }}</td>
-                <td>{{ weather.temperatureC }}</td>
-                <td>{{ weather.temperatureF }}</td>
-            </tr>
-        </tbody>
-    </table>
-    
+  <p style="text-align: center; background-color: lightskyblue; padding: 4px">
+    Weather Forecast
+  </p>
+  <form [formGroup]="searchSection">
+    <input
+      type="text"
+      placeholder="search weather"
+      class="search-bar"
+      formControlName="searchBox"
+    />
+  </form>
+
+  <table class="cool-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Summary</th>
+        <th>TemperatureC</th>
+        <th>TemperatureF</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let weather of filteredForecasts$ | async">
+        <td>{{ weather.date }}</td>
+        <td>{{ weather.summary }}</td>
+        <td>{{ weather.temperatureC }}</td>
+        <td>{{ weather.temperatureF }}</td>
+        <td>
+          <button mat-icon-button (click)="openDialog()">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="openDialog()">
+            <mat-icon>content_copy</mat-icon>
+          </button>
+          <button mat-icon-button (click)="openDialog()">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

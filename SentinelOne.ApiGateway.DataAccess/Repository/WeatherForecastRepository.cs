@@ -10,5 +10,14 @@ public class WeatherForecastRepository : BaseDbRepository, IWeatherForecastRepos
     public WeatherForecastRepository(IDbManager dbManager) : base(dbManager) { }
 
     public async Task<IEnumerable<WeatherForecast>> GetWeatherForecasts()
-        => await Connection.QueryAsync<WeatherForecast>("cha.GetWeatherForecasts", commandType: CommandType.StoredProcedure, transaction: Transaction);
+    {
+        return await Connection.QueryAsync<WeatherForecast>("GetWeatherForecasts", commandType: CommandType.StoredProcedure, transaction: Transaction);
+    }
+
+    public async Task<int> CreateAsync(WeatherForecast weatherForecast)
+    => await Connection.QueryFirstOrDefaultAsync<int>("InsertWeatherForecast", new
+    {
+        weatherForecast.TemperatureC,
+        weatherForecast.Summary,
+    }, commandType: CommandType.StoredProcedure, transaction: Transaction);
 }
