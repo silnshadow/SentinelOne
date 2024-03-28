@@ -28,4 +28,12 @@ export class WeatherForecastService {
     // Make the HTTP request with the headers
     return this.http.get<WeatherForecast[]>(this.weatherApiUrl, { headers });
   }
+
+  addWeatherForecast(weatherForecast: WeatherForecast): Observable<number> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    return this.http.post<number>(this.weatherApiUrl, weatherForecast, { headers });
+  }
 }
