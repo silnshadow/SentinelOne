@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.IdentityModel.Tokens;
 using SentinelOne.ApiGateway.Config;
+using System.Globalization;
 using System.Text;
 
 namespace SentinelOne.ApiGateway
@@ -47,6 +48,7 @@ namespace SentinelOne.ApiGateway
                     ValidateIssuerSigningKey = true
                 };
             });
+
             builder.Services.AddAuthorization();
             builder.Services.ConfigureCommonDependencyInjection(builder.Configuration);
 
