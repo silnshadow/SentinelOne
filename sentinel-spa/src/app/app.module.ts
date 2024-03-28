@@ -1,48 +1,52 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {Component} from '@angular/core';
-import { AppComponent } from './app.component';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog'; // Correct import
+
+import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-import { ErrorInterceptor } from './core/error.Interceptor';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatListModule} from '@angular/material/list';
 import { WeatherForecastComponent } from './weather-forecast/weather-forecast.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogTitle,
-  MatDialogContent,
-  MatDialogActions,
-  MatDialogClose,
-} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
-import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { ErrorInterceptor } from './core/error.interceptor'; // Assuming your interceptor file is named 'error.interceptor'
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, LoginComponent,
-    WeatherForecastComponent],
-  imports: [HttpClientModule, BrowserModule, FormsModule, AppRoutingModule,
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    LoginComponent,
+    WeatherForecastComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatListModule,
     MatInputModule,
-    ReactiveFormsModule],
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule, // Correct import
+    MatFormFieldModule
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ErrorInterceptor,
       multi: true,
     },
-  ], 
-  bootstrap: [AppComponent],
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

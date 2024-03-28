@@ -1,12 +1,22 @@
-<h2 mat-dialog-title>Hi {{data.name}}</h2>
-<mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field>
-    <mat-label>Favorite Animal</mat-label>
-    <input matInput [(ngModel)]="data.animal">
-  </mat-form-field>
+<h2 mat-dialog-title>Add Weather Forecast</h2>
+<mat-dialog-content [formGroup]="weatherForm">
+
+  <div style="margin-top: 20px;">
+    <mat-form-field appearance="outline">
+      <mat-label>Summary</mat-label>
+      <input matInput formControlName="summary">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Temperature (C)</mat-label>
+      <input matInput type="number" formControlName="temperatureC">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Temperature (F)</mat-label>
+      <input matInput type="number" formControlName="temperatureF">
+    </mat-form-field>
+  </div>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onOkClick()" [disabled]="!weatherForm.valid">OK</button>
 </mat-dialog-actions>
