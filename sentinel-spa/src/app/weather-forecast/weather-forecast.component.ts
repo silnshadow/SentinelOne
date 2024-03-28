@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, inject } from '@angular/core';
+import { Component, Inject, OnChanges, SimpleChanges, inject } from '@angular/core';
 import { WeatherForecastService } from '../core/services/weather-forecast.service';
 import { WeatherForecast } from '../core/services/model/weather.forecast.model';
 import {
@@ -82,22 +82,22 @@ export class WeatherForecastComponent implements OnChanges {
   openDialog(): void {
     if (!this.isDialogOpen) {
       const dialogConfig: MatDialogConfig = {
-        data: {},
+        data: {}, // Optionally, you can pass data to the dialog
         width: '400px',
         height: '350px',
       };
-  
+
       const dialogRef = this.dialog.open(DialogOverviewExampleDialog, dialogConfig);
-  
+
       this.isDialogOpen = true;
-  
-      dialogRef.afterClosed().subscribe((result) => {
+
+      dialogRef.afterClosed().subscribe((result: WeatherForecast) => {
         console.log('The dialog was closed');
         if (result) {
-          // Send the data to the API
-          const formData = result;
-          console.log(formData);
-          // this.sendDataToApi(formData);
+          this.weatherForecastService.addWeatherForecast(result).subscribe((newId: number) => {
+            console.log('New weather forecast added with ID:', newId);
+            // Optionally, you can perform any additional actions after adding the forecast
+          });
         }
         this.isDialogOpen = false;
       });

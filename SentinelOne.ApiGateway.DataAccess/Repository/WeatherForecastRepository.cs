@@ -13,4 +13,11 @@ public class WeatherForecastRepository : BaseDbRepository, IWeatherForecastRepos
     {
         return await Connection.QueryAsync<WeatherForecast>("GetWeatherForecasts", commandType: CommandType.StoredProcedure, transaction: Transaction);
     }
+
+    public async Task<int> CreateAsync(WeatherForecast weatherForecast)
+    => await Connection.QueryFirstOrDefaultAsync<int>("InsertWeatherForecast", new
+    {
+        weatherForecast.TemperatureC,
+        weatherForecast.Summary,
+    }, commandType: CommandType.StoredProcedure, transaction: Transaction);
 }

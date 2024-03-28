@@ -33,5 +33,12 @@ namespace SentinelOne.ApiGateway.Controllers
 
             return await Task.FromResult(result);
         }
+        [HttpPost("")]
+        public async Task<int> Add(WeatherForecast weatherForecast)
+        {
+            var result = await unitOfWork.WeatherForecast.CreateAsync(weatherForecast);
+
+            return await Task.FromResult(result);
+        }
     }
 }
