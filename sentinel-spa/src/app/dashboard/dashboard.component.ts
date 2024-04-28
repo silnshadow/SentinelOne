@@ -31,4 +31,8 @@ displayError(): void {
 showWeatherBoard(): void{
   this.router.navigate(['/weather-board']);
 }
+
+showTalentTourneyDashboard(): void{
+  this.router.navigate(['/app-music']);
+}
 }

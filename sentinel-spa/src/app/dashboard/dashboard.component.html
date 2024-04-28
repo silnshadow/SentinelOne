@@ -1,33 +1,29 @@
 <div class="dashboard-container">
-    <!-- <div class="spinner"></div> -->
+  <!-- <div class="spinner"></div> -->
 
-    <div>
-        <div class="welcome-header">
-            {{ welcomeMessage }}
-        </div>
+  <div>
+    <div class="welcome-header">
+      {{ welcomeMessage }}
     </div>
+  </div>
 
-    <div style="display: flex; margin:20px;">
-        <div class="cards">
-            <p class="service-header">
-                Interceptor
-            </p>
-            <button (click)="showWeatherBoard()"> Weather Board </button>
-        </div>
-        <div class="cards">
-            <p class="service-header">
-                Menu
-            </p>
-        </div>
-        <div class="cards">
-            <p class="service-header">
-                WebSocket
-            </p>
-        </div>
-        <div class="cards">
-            <p class="service-header">
-                RxJs
-            </p>
-        </div>
+  <div style="display: flex; margin: 20px">
+    <div class="cards">
+      <p class="service-header">Interceptor</p>
+      <button (click)="showWeatherBoard()">Weather Board</button>
     </div>
+    <div class="cards">
+      <p class="service-header">Menu</p>
+    </div>
+    <div class="cards">
+      <p class="service-header">WebSocket</p>
+    </div>
+    <div class="cards">
+      <p class="service-header">RxJs</p>
+    </div>
+    <div class="cards">
+      <p class="service-header">Talent Tourney</p>
+      <button (click)="showTalentTourneyDashboard()">Submit your work</button>
+    </div>
+  </div>
 </div>

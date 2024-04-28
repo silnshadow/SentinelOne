@@ -16,14 +16,16 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { WeatherForecastComponent } from './weather-forecast/weather-forecast.component';
-import { ErrorInterceptor } from './core/error.interceptor'; // Assuming your interceptor file is named 'error.interceptor'
+import { ErrorInterceptor } from './core/error.interceptor';
+import { MusicComponent } from './user-work/music/music.component'; // Assuming your interceptor file is named 'error.interceptor'
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     LoginComponent,
-    WeatherForecastComponent
+    WeatherForecastComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,
