@@ -41,9 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentinelOne.ApiGateway.Data
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "weather-management-inventory", "weather-management-inventory", "{8301893D-FB1B-40C7-9348-C45B3D937F51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryProducer", "InventoryProducer\InventoryProducer.csproj", "{2ABF2CBD-B4F7-45DC-898B-93C84BBA0D98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryProducer", "InventoryProducer\InventoryProducer.csproj", "{2ABF2CBD-B4F7-45DC-898B-93C84BBA0D98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryConsumer", "InventoryConsumer\InventoryConsumer.csproj", "{3ADF9673-7EE3-4EC5-B5CB-4E4BD37119B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryConsumer", "InventoryConsumer\InventoryConsumer.csproj", "{3ADF9673-7EE3-4EC5-B5CB-4E4BD37119B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workevaluation-api", "workevaluation-api", "{ECBF676E-CD35-4DC0-91A0-7B9040B1A625}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
