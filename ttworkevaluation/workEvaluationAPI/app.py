@@ -1,14 +1,21 @@
 import json
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.utils import secure_filename
+import os
+from flask import Flask
+from flask_cors import CORS
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)
 
 # Configure MySQL database connection
 # Configure MySQL database connection
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Ghost%40xl8@localhost:3306/ttevaluation'
 db = SQLAlchemy(app)
+
+app.config['UPLOAD_FOLDER'] = r'C:\Users\pc\Desktop\TalentTourney'
 
 # Define the model for the users table
 class User(db.Model):
@@ -40,23 +47,42 @@ def load_user_works_and_ratings(username):
     else:
         return jsonify({'message': 'User not found'}), 404
 
+
 # Route to upload user work
 @app.route('/upload', methods=['POST'])
 def upload_user_work():
-    data = request.json
-    if 'username' not in data or 'filename' not in data or 'file_path' not in data or 'points' not in data:
-        return jsonify({'message': 'Missing required fields'}), 400
-    
-    username = data['username']
-    user = User.query.filter_by(username=username).first()
-    if not user:
-        return jsonify({'message': 'User not found'}), 404
+    print("Hitting upload function")
+    try:
+        print("Request form data:", request.form)
+        print("Request files:", request.files)
 
-    new_work = ArtistWork(filename=data['filename'], file_path=data['file_path'], points=data['points'], user_id=user.id)
-    db.session.add(new_work)
-    db.session.commit()
-    
-    return jsonify({'message': 'Work uploaded successfully'}), 201
+        username = request.form.get('username')
+        filename = request.form.get('filename')
+        file_path = request.files.get('file_path')
+        points = request.form.get('points')
+
+        if not all([username, filename, file_path, points]):
+            return jsonify({'message': 'Missing required fields'}), 400
+
+    username = data['username']
+        user = User.query.filter_by(username=username).first()
+        if not user:
+            return jsonify({'message': 'User not found'}), 404
+
+        # Save the uploaded file
+        if file_path:
+            filename = secure_filename(file_path.filename)
+            file_path.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        
+        new_work = ArtistWork(filename=filename, file_path=file_path, points=points, user_id=user.id)
+        print(new_work)
+        db.session.add(new_work)
+        db.session.commit()
+        
+        return jsonify({'message': 'Work uploaded successfully'}), 201
+    except Exception as e:
+        print("Error:", e)
+        return jsonify({'message': 'An error occurred'}), 500
 
 if __name__ == '__main__':
     # Create database tables if they don't exist
