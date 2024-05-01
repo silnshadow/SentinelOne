@@ -64,7 +64,6 @@ def upload_user_work():
         if not all([username, filename, file_path, points]):
             return jsonify({'message': 'Missing required fields'}), 400
 
-    username = data['username']
         user = User.query.filter_by(username=username).first()
         if not user:
             return jsonify({'message': 'User not found'}), 404
